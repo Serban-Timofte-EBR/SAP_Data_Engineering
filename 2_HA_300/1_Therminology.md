@@ -68,6 +68,9 @@
 ### Virtual Data Model:
 - Ecosistem de view-uri virtuale care răspund la întrebări de business.
 - Nu persistă datele — doar le interoghează și agregă **la runtime**.
+- Un model de date se comporta diferit in functie de query. Prin Sequel Query se poate modifica.
+- Cand este interogat cu GroupBy, masurile trebuie sa contina o functie de agregare. Functia de agregare poate sa fie suprascrisa.
+- **Deferred Default Query Execution** - la preview nu se executa direct tot query-ul si pot sa setez niste filtre pentru a executa doar pe un subset de date.
 
 #### Beneficii:
 - Calcul la runtime cu `HANA database engine`
